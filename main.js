@@ -7,3 +7,5 @@ const config = {
 };
 
 const mysql = new MySQL(config);
+
+mysql.disconnect();

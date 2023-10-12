@@ -16,6 +16,16 @@ class MySQL {
       }
     });
   }
+
+  disconnect() {
+    this.connection.end((err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Disconnected from the MySQL server.");
+      }
+    });
+  }
 }
 
 module.exports = MySQL;
