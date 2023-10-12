@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/behindthemac/try-mysql2/issues"
   },
-  "homepage": "https://github.com/behindthemac/try-mysql2#readme"
+  "homepage": "https://github.com/behindthemac/try-mysql2#readme",
+  "dependencies": {
+    "mysql2": "^3.6.1"
+  }
 }
