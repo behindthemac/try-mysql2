@@ -8,4 +8,6 @@ const config = {
 
 const mysql = new MySQL(config);
 
+mysql.query("SHOW DATABASES;");
+
 mysql.disconnect();

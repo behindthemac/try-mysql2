@@ -17,6 +17,17 @@ class MySQL {
     });
   }
 
+  query(sql) {
+    this.connection.query(sql, (err, results, fields) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(fields);
+        console.log(results);
+      }
+    });
+  }
+
   disconnect() {
     this.connection.end((err) => {
       if (err) {
