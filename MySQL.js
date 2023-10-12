@@ -3,6 +3,18 @@ const mysql = require("mysql2");
 class MySQL {
   constructor(config) {
     this.config = config;
+    this.connect();
+  }
+
+  connect() {
+    this.connection = mysql.createConnection(this.config);
+    this.connection.connect((err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Connected to the MySQL server.");
+      }
+    });
   }
 }
 
